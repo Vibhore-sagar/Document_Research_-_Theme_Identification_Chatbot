@@ -1,0 +1,28 @@
+
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: genai-backend
+    ports:
+      - "8000:8000"
+    networks:
+      - genai-net
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: genai-frontend
+    ports:
+      - "8501:8501"
+    networks:
+      - genai-net
+    environment:
+      - API_URL=http://backend:8000
+    depends_on:
+      - backend
+
+networks:
+  genai-net:
+    driver: bridge
