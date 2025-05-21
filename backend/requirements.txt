@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pdfplumber
+pytesseract
+python-dotenv
+langchain
+Pillow
+sentence-transformers
+transformers
+torch
