@@ -70,8 +70,8 @@ This project outlines the complete step-by-step implementation of the Document R
 
 - [x] Duplicate file detection on upload
 - [x] Delete documents via API (`DELETE /delete/{id}`)
-- [ ] Export theme summaries to file (optional)
-- [ ] Multi-theme extraction support (planned)
+- [x] Export theme summaries to file (optional)
+- [x] Multi-theme extraction support (planned)
 
 ---
 
