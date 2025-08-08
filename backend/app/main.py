@@ -5,17 +5,17 @@ from fastapi.responses import JSONResponse
 from typing import List
 import os, shutil
 from sqlalchemy.exc import IntegrityError
-from app.services.chat_engine import generate_answer
+from .services.chat_engine import generate_answer
 from pydantic import BaseModel
 from fastapi import HTTPException
-from app.services.vector_store import collection  # already imported
+from .services.vector_store import collection  # already imported
 
 # Import your internal modules
-from app.services.text_extraction import extract_text_from_pdf
-from app.core.database import SessionLocal, init_db
-from app.models.document import Document
-from app.services.vector_store import split_and_store_chunks, semantic_search, collection
-from app.services.theme_engine import synthesize_themes
+from .services.text_extraction import extract_text_from_pdf
+from .core.database import SessionLocal, init_db
+from .models.document import Document
+from .services.vector_store import split_and_store_chunks, semantic_search, collection
+from .services.theme_engine import synthesize_themes
 
 
 # ✅ Initialize FastAPI app
